@@ -1,9 +1,10 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 $Folder = "C:\Users\JT\Desktop\Trident Nov 9\Course resources and files\Course folders to test links"
 #$$Folder = "C:\dnload\scripts\powershell\Test"
 $Documenttype = "docx"
 $WordFiles = get-childitem -path $folder -Recurse -include *.$Documenttype
-
+$filename =  get-date -format MMddyyyy_hhMM
 $results = @()
 
 foreach ($File in $WordFiles.fullname) 
@@ -47,4 +48,4 @@ foreach ($File in $WordFiles.fullname)
 }
 
 #print out Results
-$results
+$results >  $Folder\$filename.csv
