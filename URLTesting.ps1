@@ -1,5 +1,5 @@
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$Folder = "C:\dnload\scripts\docs"
+$Folder = "C:\Users\JT\Desktop\Trident Nov 9\Course resources and files\Course folders to test links"
 #$$Folder = "C:\dnload\scripts\powershell\Test"
 $Documenttype = "docx"
 $WordFiles = get-childitem -path $folder -Recurse -include *.$Documenttype
