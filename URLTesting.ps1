@@ -22,6 +22,9 @@ foreach ($File in $WordFiles.fullname)
         $HTTP_Request = [System.Net.WebRequest]::Create($item)
         Write-Host "Testing $item"
         # Get a response from the site.  
+        
+        #$CurlResponse = (Invoke-WebRequest $item).statuscode
+                
         try{$HTTP_Response = $HTTP_Request.GetResponse()}
           catch [System.Net.WebException] {
                 Write-host 'Bad Site' `n -foregroundcolor Red
